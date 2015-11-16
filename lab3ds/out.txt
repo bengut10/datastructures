@@ -1,0 +1,165 @@
+A list of random numbers has been generated
+
+The following choices are available: 
+A	Add a number of random integers to the end of the list!
+C	Change the capacity of the list!
+E	Check to see if the list is empty!
+P	Print a copy of the entire list!
+I	Insert a new number!
+R	Remove a number!
+p
+------------------------------------------------
+423  737  193  34  898  
+Current list capacity: 10
+Current list size: 5
+
+------------------------------------------------
+Would you like to continue? [Y/N]
+y
+
+The following choices are available: 
+A	Add a number of random integers to the end of the list!
+C	Change the capacity of the list!
+E	Check to see if the list is empty!
+P	Print a copy of the entire list!
+I	Insert a new number!
+R	Remove a number!
+a
+------------------------------------------------
+Please enter an integer: 
+10
+Adding 10 numbers to the end of the current list. 
+
+------------------------------------------------
+Would you like to continue? [Y/N]
+y
+
+The following choices are available: 
+A	Add a number of random integers to the end of the list!
+C	Change the capacity of the list!
+E	Check to see if the list is empty!
+P	Print a copy of the entire list!
+I	Insert a new number!
+R	Remove a number!
+p
+------------------------------------------------
+423  737  193  34  898  704  704  486  835  69  128  69  644  994  163  
+Current list capacity: 20
+Current list size: 15
+
+------------------------------------------------
+Would you like to continue? [Y/N]
+y
+
+The following choices are available: 
+A	Add a number of random integers to the end of the list!
+C	Change the capacity of the list!
+E	Check to see if the list is empty!
+P	Print a copy of the entire list!
+I	Insert a new number!
+R	Remove a number!
+c
+------------------------------------------------
+Please enter an integer: 
+100
+Capacity has been resized!
+------------------------------------------------
+Would you like to continue? [Y/N]
+y
+
+The following choices are available: 
+A	Add a number of random integers to the end of the list!
+C	Change the capacity of the list!
+E	Check to see if the list is empty!
+P	Print a copy of the entire list!
+I	Insert a new number!
+R	Remove a number!
+p
+------------------------------------------------
+423  737  193  34  898  704  704  486  835  69  128  69  644  994  163  
+Current list capacity: 100
+Current list size: 15
+
+------------------------------------------------
+Would you like to continue? [Y/N]
+y
+
+The following choices are available: 
+A	Add a number of random integers to the end of the list!
+C	Change the capacity of the list!
+E	Check to see if the list is empty!
+P	Print a copy of the entire list!
+I	Insert a new number!
+R	Remove a number!
+e
+------------------------------------------------
+List is not empty!
+------------------------------------------------
+Would you like to continue? [Y/N]
+y
+
+The following choices are available: 
+A	Add a number of random integers to the end of the list!
+C	Change the capacity of the list!
+E	Check to see if the list is empty!
+P	Print a copy of the entire list!
+I	Insert a new number!
+R	Remove a number!
+i
+------------------------------------------------
+Please enter an integer: 
+777
+Which position would you like to input 777
+5
+------------------------------------------------
+Would you like to continue? [Y/N]
+y
+
+The following choices are available: 
+A	Add a number of random integers to the end of the list!
+C	Change the capacity of the list!
+E	Check to see if the list is empty!
+P	Print a copy of the entire list!
+I	Insert a new number!
+R	Remove a number!
+p
+------------------------------------------------
+423  737  193  34  898  777  704  704  486  835  69  128  69  644  994  163  
+Current list capacity: 100
+Current list size: 16
+
+------------------------------------------------
+Would you like to continue? [Y/N]
+y
+
+The following choices are available: 
+A	Add a number of random integers to the end of the list!
+C	Change the capacity of the list!
+E	Check to see if the list is empty!
+P	Print a copy of the entire list!
+I	Insert a new number!
+R	Remove a number!
+r
+------------------------------------------------
+Please enter an integer: 
+5
+------------------------------------------------
+Would you like to continue? [Y/N]
+y
+
+The following choices are available: 
+A	Add a number of random integers to the end of the list!
+C	Change the capacity of the list!
+E	Check to see if the list is empty!
+P	Print a copy of the entire list!
+I	Insert a new number!
+R	Remove a number!
+p
+------------------------------------------------
+423  737  193  34  898  704  704  486  835  69  128  69  644  994  163  
+Current list capacity: 100
+Current list size: 15
+
+------------------------------------------------
+Would you like to continue? [Y/N]
+n

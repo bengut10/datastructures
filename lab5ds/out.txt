@@ -1,0 +1,49 @@
+=================================
+Enter postfix expression
+921+/4*
+=================================
+The value of the expression is 12
+
+More expressions?
+y
+=================================
+Enter postfix expression
+2 3 4 + *
+=================================
+The value of the expression is 14
+
+More expressions?
+y
+=================================
+Enter postfix expression
+5 2 + 2 /
+=================================
+The value of the expression is 3
+
+More expressions?
+y
+=================================
+Enter postfix expression
+234+
+=================================
+*** Invalid expression ***
+More expressions?
+y
+=================================
+Enter postfix expression
+234+++
+=================================
+*** Invalid expression ***
+More expressions?
+y
+=================================
+Enter postfix expression
+3w+
+=================================
+*** Invalid expression ***
+More expressions?
+n
+
+--------------------------------
+Process exited after 89.1 seconds with return value 0
+Press any key to continue . . .

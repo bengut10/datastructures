@@ -1,0 +1,265 @@
+========================================================
+THE FOLLOWING CHOICES ARE AVAILABLE:
+
+A --> Append 3 strings to the list
+S --> Display the list size
+C --> Print the result from using the copy constructor
+O --> Print the result from using the assignment operator
+E --> Print the result from the empty function
+P --> Print the entire list
+I --> Insert a new item with the insert(...) function
+F --> Find an item with the find() function
+R --> Remove an item with the erase() function
+Q --> Quit
+========================================================
+A
+Enter a name:
+Barbara
+Enter a name:
+Travis
+Enter a name:
+Wayne
+========================================================
+THE FOLLOWING CHOICES ARE AVAILABLE:
+
+A --> Append 3 strings to the list
+S --> Display the list size
+C --> Print the result from using the copy constructor
+O --> Print the result from using the assignment operator
+E --> Print the result from the empty function
+P --> Print the entire list
+I --> Insert a new item with the insert(...) function
+F --> Find an item with the find() function
+R --> Remove an item with the erase() function
+Q --> Quit
+========================================================
+s
+Current size of the list: 8
+========================================================
+THE FOLLOWING CHOICES ARE AVAILABLE:
+
+A --> Append 3 strings to the list
+S --> Display the list size
+C --> Print the result from using the copy constructor
+O --> Print the result from using the assignment operator
+E --> Print the result from the empty function
+P --> Print the entire list
+I --> Insert a new item with the insert(...) function
+F --> Find an item with the find() function
+R --> Remove an item with the erase() function
+Q --> Quit
+========================================================
+p
+Name: Jose
+Name: Luke
+Name: Alex
+Name: Michael
+Name: Floyd
+Name: Barbara
+Name: Travis
+Name: Wayne
+Current size of the list: 8
+
+========================================================
+THE FOLLOWING CHOICES ARE AVAILABLE:
+
+A --> Append 3 strings to the list
+S --> Display the list size
+C --> Print the result from using the copy constructor
+O --> Print the result from using the assignment operator
+E --> Print the result from the empty function
+P --> Print the entire list
+I --> Insert a new item with the insert(...) function
+F --> Find an item with the find() function
+R --> Remove an item with the erase() function
+Q --> Quit
+========================================================
+i
+Please enter a name to insert into the list:
+Julio
+Please enter a position
+3
+========================================================
+THE FOLLOWING CHOICES ARE AVAILABLE:
+
+A --> Append 3 strings to the list
+S --> Display the list size
+C --> Print the result from using the copy constructor
+O --> Print the result from using the assignment operator
+E --> Print the result from the empty function
+P --> Print the entire list
+I --> Insert a new item with the insert(...) function
+F --> Find an item with the find() function
+R --> Remove an item with the erase() function
+Q --> Quit
+========================================================
+p
+Name: Jose
+Name: Luke
+Name: Alex
+Name: Julio
+Name: Michael
+Name: Floyd
+Name: Barbara
+Name: Travis
+Name: Wayne
+Current size of the list: 9
+
+========================================================
+THE FOLLOWING CHOICES ARE AVAILABLE:
+
+A --> Append 3 strings to the list
+S --> Display the list size
+C --> Print the result from using the copy constructor
+O --> Print the result from using the assignment operator
+E --> Print the result from the empty function
+P --> Print the entire list
+I --> Insert a new item with the insert(...) function
+F --> Find an item with the find() function
+R --> Remove an item with the erase() function
+Q --> Quit
+========================================================
+r
+Enter a position to remove the name from the list:
+4
+========================================================
+THE FOLLOWING CHOICES ARE AVAILABLE:
+
+A --> Append 3 strings to the list
+S --> Display the list size
+C --> Print the result from using the copy constructor
+O --> Print the result from using the assignment operator
+E --> Print the result from the empty function
+P --> Print the entire list
+I --> Insert a new item with the insert(...) function
+F --> Find an item with the find() function
+R --> Remove an item with the erase() function
+Q --> Quit
+========================================================
+p
+Name: Jose
+Name: Luke
+Name: Alex
+Name: Julio
+Name: Floyd
+Name: Barbara
+Name: Travis
+Name: Wayne
+Current size of the list: 8
+
+========================================================
+THE FOLLOWING CHOICES ARE AVAILABLE:
+
+A --> Append 3 strings to the list
+S --> Display the list size
+C --> Print the result from using the copy constructor
+O --> Print the result from using the assignment operator
+E --> Print the result from the empty function
+P --> Print the entire list
+I --> Insert a new item with the insert(...) function
+F --> Find an item with the find() function
+R --> Remove an item with the erase() function
+Q --> Quit
+========================================================
+f
+Enter the name you are looking for:
+Julio
+The number was found in the position 3
+========================================================
+THE FOLLOWING CHOICES ARE AVAILABLE:
+
+A --> Append 3 strings to the list
+S --> Display the list size
+C --> Print the result from using the copy constructor
+O --> Print the result from using the assignment operator
+E --> Print the result from the empty function
+P --> Print the entire list
+I --> Insert a new item with the insert(...) function
+F --> Find an item with the find() function
+R --> Remove an item with the erase() function
+Q --> Quit
+========================================================
+e
+List is not empty
+========================================================
+THE FOLLOWING CHOICES ARE AVAILABLE:
+
+A --> Append 3 strings to the list
+S --> Display the list size
+C --> Print the result from using the copy constructor
+O --> Print the result from using the assignment operator
+E --> Print the result from the empty function
+P --> Print the entire list
+I --> Insert a new item with the insert(...) function
+F --> Find an item with the find() function
+R --> Remove an item with the erase() function
+Q --> Quit
+========================================================
+c
+Contents of the new list using the CP:
+Name: Jose
+Name: Luke
+Name: Alex
+Name: Julio
+Name: Floyd
+Name: Barbara
+Name: Travis
+Name: Wayne
+Current size of the list: 8
+
+========================================================
+THE FOLLOWING CHOICES ARE AVAILABLE:
+
+A --> Append 3 strings to the list
+S --> Display the list size
+C --> Print the result from using the copy constructor
+O --> Print the result from using the assignment operator
+E --> Print the result from the empty function
+P --> Print the entire list
+I --> Insert a new item with the insert(...) function
+F --> Find an item with the find() function
+R --> Remove an item with the erase() function
+Q --> Quit
+========================================================
+o
+Contents of List 1:
+Name: Jose
+Name: Luke
+Name: Alex
+Name: Julio
+Name: Floyd
+Name: Barbara
+Name: Travis
+Name: Wayne
+Current size of the list: 8
+
+Contents of List 2:
+Name: Jose
+Name: Luke
+Name: Alex
+Name: Julio
+Name: Floyd
+Name: Barbara
+Name: Travis
+Name: Wayne
+Current size of the list: 8
+
+========================================================
+THE FOLLOWING CHOICES ARE AVAILABLE:
+
+A --> Append 3 strings to the list
+S --> Display the list size
+C --> Print the result from using the copy constructor
+O --> Print the result from using the assignment operator
+E --> Print the result from the empty function
+P --> Print the entire list
+I --> Insert a new item with the insert(...) function
+F --> Find an item with the find() function
+R --> Remove an item with the erase() function
+Q --> Quit
+========================================================
+q
+
+--------------------------------
+Process exited after 110.4 seconds with return value 0
+Press any key to continue . . .
