@@ -5,38 +5,38 @@
 
 using namespace std;
 
-#include "hash_chn.h"
+#include "DRV_HWCH.h"
 
 Table::Table( )
 {
-   used = 0;
-   for ( int i = 0; i < CAPACITY; i++ )
-      table[i] = NULL;
+    used = 0;
+    for ( int i = 0; i < CAPACITY; i++ )
+        table[i] = NULL;
 }
 
 void Table::insert( const RecordType& entry )
 {
-   bool alreadyThere;
-   Node* nodePtr;
-   
-   assert( entry.key >= 0 );
-   
-   findPtr( entry.key, alreadyThere, nodePtr );
-   if( !alreadyThere )
-   {
-      int i = hash( entry.key );      // get index of "bucket" where entry belongs
-      // insert at beginning of list
-      Node* temp = new Node;
-      temp->rec = entry;      // copy record
-      temp->next = table[i];
-      table[i] = temp;
-      used++;
-   }
-   else 
-   {
-      // nodePtr points to existing record that should be updated
-      nodePtr->rec = entry;
-   } 
+    bool alreadyThere;
+    Node* nodePtr;
+    
+    assert( entry.key >= 0 );
+    
+    findPtr( entry.key, alreadyThere, nodePtr );
+    if( !alreadyThere )
+    {
+        int i = hash( entry.key );      // get index of "bucket" where entry belongs
+        // insert at beginning of list
+        Node* temp = new Node;
+        temp->rec = entry;      // copy record
+        temp->next = table[i];
+        table[i] = temp;
+        used++;
+    }
+    else
+    {
+        // nodePtr points to existing record that should be updated
+        nodePtr->rec = entry;
+    }
 }
 
 void Table::print()
@@ -63,89 +63,96 @@ void Table::print()
         
     }
 }
+
 void Table::erase(int key, int number)
 {
     assert( key >= 0 );
     int i = 0;
-    bool alreadyThere;
-    Node * nodePtr;
-    Node * current;
+    bool element = false;
     Node * first;
+    Node * previous;
     
-    findPtr(key, alreadyThere, nodePtr);
+    i = hash(key);
+    first =   table[i];
     
-    if(alreadyThere)
+    if(table[i]->rec.data == number && table[i]->next == NULL)
     {
-        i = hash(key);
-        current = table[i];
-        first =   table[i];
-        
-        if(current->rec.data == number & current->next == NULL)
+        table[i] = NULL;
+        delete table[i];
+        used --;
+    }
+    
+    else
+    {
+        while(first != NULL)
         {
-            table[i] = NULL;
-        }
-        else
-        {
-            while(current != NULL)
+            if(first->rec.data == number)
             {
-                if (current->rec.data == number)
-                {
-                    current->rec.data = first->rec.data;
-                    table[i] = table[i]->next;
-                }
-                current = current->next;
+                element = true;
+                first->rec = table[i]->rec;
+                previous = table[i];
+                table[i] = table[i]->next;
+                delete previous;
+                used --;
             }
+            first = first->next;
+        }
+        
+        if(element == false)
+        {
+            cerr << "The element was not found in the record" << endl;
         }
     }
+
 }
 
 int Table::hash( int key ) const
 {
-   return key % CAPACITY;
+    return key % CAPACITY;
 }
 
 int Table::size( ) const
 {
-   return used;
-}  
+    return used;
+}
 
 // findPtr function
-//     void findPtr( int key, bool& found, Node*& nodePtr ) const; 
+//     void findPtr( int key, bool& found, Node*& nodePtr ) const;
 // Preconditions:  key >= 0
-// Postconditions: If a record with the indicated key is in the table, 
+// Postconditions: If a record with the indicated key is in the table,
 //    then found is true and nodePtr is set to point to that record.
-//    Otherwise, found is false and nodePtr contains garbage. 
+//    Otherwise, found is false and nodePtr contains garbage.
 
 void Table::findPtr( int key, bool& found, Node*& nodePtr ) const
 {
-   int i;
-   Node* ptr;
-
-   i = hash( key );
-   ptr = table[i];
-   found = false;
-   while ( !found && ptr != NULL )
-   {
-      if ( key == ptr->rec.key )
-      {
-         found = true;
-         nodePtr = ptr;
-      }
-      ptr = ptr->next;
-   }   
-   if ( !found )
-      nodePtr = NULL;
+    int i;
+    Node* ptr;
+    
+    i = hash( key );
+    ptr = table[i];
+    found = false;
+    while ( !found && ptr != NULL )
+    {
+        if ( key == ptr->rec.key )
+        {
+            found = true;
+            nodePtr = ptr;
+        }
+        ptr = ptr->next;
+    }
+    if ( !found )
+        nodePtr = NULL;
 }
 
 void Table::find( int key, bool& found, RecordType& result ) const
 {
-   Node* nodePtr;
-   
-   assert( key >= 0 );
-   
-   findPtr( key, found, nodePtr );
-   if ( found )
-   {
-      result = nodePtr->rec;
-   }
+    Node* nodePtr;
+    
+    assert( key >= 0 );
+    
+    findPtr( key, found, nodePtr );
+    if ( found )
+    {
+        result = nodePtr->rec;
+    }
 }

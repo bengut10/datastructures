@@ -16,9 +16,11 @@
 
 using namespace std;
 
-#include "hash_chn.h"
+#include "DRV_HWCH.h"
 
 void printMenu( );
+
+int capacity(int capacity, const Table &size);
 
 int main( )
 {
@@ -27,7 +29,7 @@ int main( )
     RecordType rec;
     int key;
     bool found;
-    int size ,  number;
+    int size ,  number , spotsLeft;
     
     
     
@@ -45,66 +47,91 @@ int main( )
         printMenu( );
         cout << "Enter choice: ";
         cin >> choice;
-        cout << endl; 
+        cout << endl;
         choice = toupper(choice);
         
         switch (choice)
         {
             case 'I': // insert
-                      cout << "Enter key (int >= 0) for record: ";
-                      cin >> rec.key;
-                      cout << "Enter data (int) for record: ";
-                      cin >> rec.data;
-                      dataTable.insert( rec );
-                      cout << "Record was inserted in table" << endl << endl;
-                      break;
+                cout << "Enter key (int >= 0) for record: ";
+                cin >> rec.key;
+                cout << "Enter data (int) for record: ";
+                cin >> rec.data;
+                dataTable.insert( rec );
+                cout << "Record was inserted in table" << endl << endl;
+                break;
             case 'F': // find
-                      cout << "Enter key (int >= 0) to search for: ";
-                      cin >> key;
-                      dataTable.find( key, found, rec );
-                      if ( found )
-                      {
-                         cout << "Record was found." << endl;
-                         cout << "   key  = " << setw(8) 
-                              << rec.key << endl;
-                         cout << "   data = " << setw(8) 
-                              << rec.data << endl;
-                      }
-                      else
-                         cout << "Record with key " << key << " not found." 
-                              << endl << endl;
-                      break;
+                cout << "Enter key (int >= 0) to search for: ";
+                cin >> key;
+                dataTable.find( key, found, rec );
+                if ( found )
+                {
+                    cout << "Record was found." << endl;
+                    cout << "   key  = " << setw(8)
+                    << rec.key << endl;
+                    cout << "   data = " << setw(8)
+                    << rec.data << endl;
+                }
+                else
+                    cout << "Record with key " << key << " not found."
+                    << endl << endl;
+                break;
             case 'D': // delete
-                      cout << "Enter key (int >= 0) to delete: ";
-                      cin >> key;
-                      cout << "Which record to delete?" << endl;
-                      cin >> number;
-                      dataTable.erase(key,number);
-                      break;
-                      
+                cout << "Enter key (int >= 0) to delete: ";
+                cin >> key;
+                dataTable.find( key, found, rec );
+                if ( found )
+                {
+                    cout << "Which record to delete?" << endl;
+                    cin >> number;
+                    dataTable.erase(key,number);
+                }
+                else
+                {
+                    cerr<< "Record not found" << endl;
+                }
+                break;
+                
             case 'S': // size
-                      size = dataTable.size( );
-                      cout << "There are " << size << " records in the table." 
-                           << endl;
-                     // cout << "There are " << (CAPACITY - size) 
-                     //      << " empty slots left in the table." << endl << endl;
-                      break;
+                size = dataTable.size( );
+                cout << "There are " << size << " records in the table."
+                << endl;
+                spotsLeft = capacity(CAPACITY, dataTable);
+                cout << "There are " << spotsLeft
+                     << " empty slots left in the table." << endl << endl;
+                break;
             case 'P': // print table
-                      dataTable.print();
-                      break;
+                dataTable.print();
+                break;
             case 'Q': cout << "Test program ended." << endl;
-                      break;
+                break;
             default:  cout << choice << " is invalid." << endl;
         }
     }
     while ((choice != 'Q'));
-
+    
     return 0;
 }
 
+int capacity(int capacity, const Table &dataTable){
+    
+    
+    int size = dataTable.size();
+    if (size > capacity)
+    {
+        return 0;
+    }
+    else
+    {
+        return capacity - size;
+    }
+    
+}
+
+
 void printMenu( )
 {
-    cout << endl; 
+    cout << endl;
     cout << "The following choices are available: " << endl;
     cout << " I   Insert a new record or update existing record" << endl;
     cout << " F   Find a record" << endl;
@@ -113,171 +140,3 @@ void printMenu( )
     cout << " P   Print the contents of the table" << endl;
     cout << " Q   Quit this test program" << endl << endl;
 }
-/*
-
-The following choices are available:
- I   Insert a new record or update existing record
- F   Find a record
- S   Get the number of records
- P   Print the contents of the table
- Q   Quit this test program
-
-Enter choice: i
-
-Enter key (int >= 0) for record: 620
-Enter data (int) for record: 620
-Record was inserted in table
-
-
-The following choices are available:
- I   Insert a new record or update existing record
- F   Find a record
- S   Get the number of records
- P   Print the contents of the table
- Q   Quit this test program
-
-Enter choice: i
-
-Enter key (int >= 0) for record: 64
-Enter data (int) for record: 64
-Record was inserted in table
-
-
-The following choices are available:
- I   Insert a new record or update existing record
- F   Find a record
- S   Get the number of records
- P   Print the contents of the table
- Q   Quit this test program
-
-Enter choice: i
-
-Enter key (int >= 0) for record: 128
-Enter data (int) for record: 128
-Record was inserted in table
-
-
-The following choices are available:
- I   Insert a new record or update existing record
- F   Find a record
- S   Get the number of records
- P   Print the contents of the table
- Q   Quit this test program
-
-Enter choice: i
-
-Enter key (int >= 0) for record: 467
-Enter data (int) for record: 467
-Record was inserted in table
-
-
-The following choices are available:
- I   Insert a new record or update existing record
- F   Find a record
- S   Get the number of records
- P   Print the contents of the table
- Q   Quit this test program
-
-Enter choice: i
-
-Enter key (int >= 0) for record: 777
-Enter data (int) for record: 777
-Record was inserted in table
-
-
-The following choices are available:
- I   Insert a new record or update existing record
- F   Find a record
- S   Get the number of records
- P   Print the contents of the table
- Q   Quit this test program
-
-Enter choice: i
-
-Enter key (int >= 0) for record: 35
-Enter data (int) for record: 35
-Record was inserted in table
-
-
-The following choices are available:
- I   Insert a new record or update existing record
- F   Find a record
- S   Get the number of records
- P   Print the contents of the table
- Q   Quit this test program
-
-Enter choice: i
-
-Enter key (int >= 0) for record: 127
-Enter data (int) for record: 127
-Record was inserted in table
-
-
-The following choices are available:
- I   Insert a new record or update existing record
- F   Find a record
- S   Get the number of records
- P   Print the contents of the table
- Q   Quit this test program
-
-Enter choice: i
-
-Enter key (int >= 0) for record: 282
-Enter data (int) for record: 282
-Record was inserted in table
-
-
-The following choices are available:
- I   Insert a new record or update existing record
- F   Find a record
- S   Get the number of records
- P   Print the contents of the table
- Q   Quit this test program
-
-Enter choice: p
-
-Print the contents of the table.
-The hash table is:
-Index  Key/Data
-    0  620/620
-    1
-    2  777/777  467/467   64/64
-    3  282/282  127/127
-    4   35/35  128/128
-    5
-    6
-    7
-    8
-    9
-   10
-   11
-   12
-   13
-   14
-   15
-   16
-   17
-   18
-   19
-   20
-   21
-   22
-   23
-   24
-   25
-   26
-   27
-   28
-   29
-   30
-
-The following choices are available:
- I   Insert a new record or update existing record
- F   Find a record
- S   Get the number of records
- P   Print the contents of the table
- Q   Quit this test program
-
-Enter choice:
-
-*/
