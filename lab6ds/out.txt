@@ -1,0 +1,276 @@
+I have initialized an empty BST of int.
+
+The following choices are available:
+ A   Add n random numbers to the tree
+ H   Print the height of the tree
+ L   Print the leaf count of the tree
+ G   Print a graph of the tree using graph()
+ E   Print the result from the empty( ) function
+ P   Print the entire tree, the height, and the leaf count
+ I   Insert a new item with the insert() function
+ S   Find an item with the search( ) function
+ R   Remove an item with the remove( ) function
+ Q   Quit this test program
+Enter choice: A
+How many numbers would you like to add to the list?
+10
+
+The following choices are available:
+ A   Add n random numbers to the tree
+ H   Print the height of the tree
+ L   Print the leaf count of the tree
+ G   Print a graph of the tree using graph()
+ E   Print the result from the empty( ) function
+ P   Print the entire tree, the height, and the leaf count
+ I   Insert a new item with the insert() function
+ S   Find an item with the search( ) function
+ R   Remove an item with the remove( ) function
+ Q   Quit this test program
+Enter choice: G
+                                986
+                        853
+                811
+        703
+                        647
+                                527
+                                        478
+                444
+ 197
+        10
+
+The following choices are available:
+ A   Add n random numbers to the tree
+ H   Print the height of the tree
+ L   Print the leaf count of the tree
+ G   Print a graph of the tree using graph()
+ E   Print the result from the empty( ) function
+ P   Print the entire tree, the height, and the leaf count
+ I   Insert a new item with the insert() function
+ S   Find an item with the search( ) function
+ R   Remove an item with the remove( ) function
+ Q   Quit this test program
+Enter choice: P
+10  197  444  478  527  647  703  811  853  986
+Height: 6
+Leaves: 3
+
+The following choices are available:
+ A   Add n random numbers to the tree
+ H   Print the height of the tree
+ L   Print the leaf count of the tree
+ G   Print a graph of the tree using graph()
+ E   Print the result from the empty( ) function
+ P   Print the entire tree, the height, and the leaf count
+ I   Insert a new item with the insert() function
+ S   Find an item with the search( ) function
+ R   Remove an item with the remove( ) function
+ Q   Quit this test program
+Enter choice: H
+Height of the BST: 6
+
+The following choices are available:
+ A   Add n random numbers to the tree
+ H   Print the height of the tree
+ L   Print the leaf count of the tree
+ G   Print a graph of the tree using graph()
+ E   Print the result from the empty( ) function
+ P   Print the entire tree, the height, and the leaf count
+ I   Insert a new item with the insert() function
+ S   Find an item with the search( ) function
+ R   Remove an item with the remove( ) function
+ Q   Quit this test program
+Enter choice: L
+Number of leaves in the BST: 3
+
+The following choices are available:
+ A   Add n random numbers to the tree
+ H   Print the height of the tree
+ L   Print the leaf count of the tree
+ G   Print a graph of the tree using graph()
+ E   Print the result from the empty( ) function
+ P   Print the entire tree, the height, and the leaf count
+ I   Insert a new item with the insert() function
+ S   Find an item with the search( ) function
+ R   Remove an item with the remove( ) function
+ Q   Quit this test program
+Enter choice: R
+Please enter the number you wish to remove
+444
+
+The following choices are available:
+ A   Add n random numbers to the tree
+ H   Print the height of the tree
+ L   Print the leaf count of the tree
+ G   Print a graph of the tree using graph()
+ E   Print the result from the empty( ) function
+ P   Print the entire tree, the height, and the leaf count
+ I   Insert a new item with the insert() function
+ S   Find an item with the search( ) function
+ R   Remove an item with the remove( ) function
+ Q   Quit this test program
+Enter choice: S
+Please enter the number you are looking for
+811
+Item was found on the list
+
+The following choices are available:
+ A   Add n random numbers to the tree
+ H   Print the height of the tree
+ L   Print the leaf count of the tree
+ G   Print a graph of the tree using graph()
+ E   Print the result from the empty( ) function
+ P   Print the entire tree, the height, and the leaf count
+ I   Insert a new item with the insert() function
+ S   Find an item with the search( ) function
+ R   Remove an item with the remove( ) function
+ Q   Quit this test program
+Enter choice: E
+List is not empty
+
+The following choices are available:
+ A   Add n random numbers to the tree
+ H   Print the height of the tree
+ L   Print the leaf count of the tree
+ G   Print a graph of the tree using graph()
+ E   Print the result from the empty( ) function
+ P   Print the entire tree, the height, and the leaf count
+ I   Insert a new item with the insert() function
+ S   Find an item with the search( ) function
+ R   Remove an item with the remove( ) function
+ Q   Quit this test program
+Enter choice: G
+                                986
+                        853
+                811
+        703
+                647
+                        527
+                                478
+ 197
+        10
+
+The following choices are available:
+ A   Add n random numbers to the tree
+ H   Print the height of the tree
+ L   Print the leaf count of the tree
+ G   Print a graph of the tree using graph()
+ E   Print the result from the empty( ) function
+ P   Print the entire tree, the height, and the leaf count
+ I   Insert a new item with the insert() function
+ S   Find an item with the search( ) function
+ R   Remove an item with the remove( ) function
+ Q   Quit this test program
+Enter choice: P
+10  197  478  527  647  703  811  853  986
+Height: 5
+Leaves: 3
+
+The following choices are available:
+ A   Add n random numbers to the tree
+ H   Print the height of the tree
+ L   Print the leaf count of the tree
+ G   Print a graph of the tree using graph()
+ E   Print the result from the empty( ) function
+ P   Print the entire tree, the height, and the leaf count
+ I   Insert a new item with the insert() function
+ S   Find an item with the search( ) function
+ R   Remove an item with the remove( ) function
+ Q   Quit this test program
+Enter choice: A
+How many numbers would you like to add to the list?
+10
+Item already in the tree
+
+The following choices are available:
+ A   Add n random numbers to the tree
+ H   Print the height of the tree
+ L   Print the leaf count of the tree
+ G   Print a graph of the tree using graph()
+ E   Print the result from the empty( ) function
+ P   Print the entire tree, the height, and the leaf count
+ I   Insert a new item with the insert() function
+ S   Find an item with the search( ) function
+ R   Remove an item with the remove( ) function
+ Q   Quit this test program
+Enter choice: G
+                                986
+                        853
+                811
+                                764
+                        739
+        703
+                        662
+                647
+                                536
+                        527
+                                478
+                                                396
+                                        216
+ 197
+                                94
+                        70
+                45
+        10
+
+The following choices are available:
+ A   Add n random numbers to the tree
+ H   Print the height of the tree
+ L   Print the leaf count of the tree
+ G   Print a graph of the tree using graph()
+ E   Print the result from the empty( ) function
+ P   Print the entire tree, the height, and the leaf count
+ I   Insert a new item with the insert() function
+ S   Find an item with the search( ) function
+ R   Remove an item with the remove( ) function
+ Q   Quit this test program
+Enter choice: P
+10  45  70  94  197  216  396  478  527  536  647  662  703  739  764  811  853
+ 986
+Height: 7
+Leaves: 6
+
+The following choices are available:
+ A   Add n random numbers to the tree
+ H   Print the height of the tree
+ L   Print the leaf count of the tree
+ G   Print a graph of the tree using graph()
+ E   Print the result from the empty( ) function
+ P   Print the entire tree, the height, and the leaf count
+ I   Insert a new item with the insert() function
+ S   Find an item with the search( ) function
+ R   Remove an item with the remove( ) function
+ Q   Quit this test program
+Enter choice: H
+Height of the BST: 7
+
+The following choices are available:
+ A   Add n random numbers to the tree
+ H   Print the height of the tree
+ L   Print the leaf count of the tree
+ G   Print a graph of the tree using graph()
+ E   Print the result from the empty( ) function
+ P   Print the entire tree, the height, and the leaf count
+ I   Insert a new item with the insert() function
+ S   Find an item with the search( ) function
+ R   Remove an item with the remove( ) function
+ Q   Quit this test program
+Enter choice: L
+Number of leaves in the BST: 6
+
+The following choices are available:
+ A   Add n random numbers to the tree
+ H   Print the height of the tree
+ L   Print the leaf count of the tree
+ G   Print a graph of the tree using graph()
+ E   Print the result from the empty( ) function
+ P   Print the entire tree, the height, and the leaf count
+ I   Insert a new item with the insert() function
+ S   Find an item with the search( ) function
+ R   Remove an item with the remove( ) function
+ Q   Quit this test program
+Enter choice: Q
+Test program ended.
+
+--------------------------------
+Process exited after 74.74 seconds with return value 0
+Press any key to continue . . .
