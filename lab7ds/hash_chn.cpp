@@ -41,69 +41,72 @@ void Table::insert( const RecordType& entry )
 
 void Table::print()
 {
-    cout << "Index      Key       Data:" << endl;
+    cout << "Index   (Key,Data)" << endl;
     cout << "-------------------------------" << endl;
-    
     for(int i = 0; i < CAPACITY; i++)
     {
         Node * ptr = table[i];
-        
         if(table[i] != NULL)
         {
-            
-            cout << "\n";
-            cout << setw(3) << i << setw(10) << table[i]->rec.key << setw(10);
+            cout << endl;
+            cout << setw(4) << i << setw(5);
         }
-        
-        while (ptr != NULL)
+        while(ptr != NULL)
         {
-            cout << ptr->rec.data << setw(4) ;
+            cout << "(" << ptr->rec.key << ",";
+            cout << ptr->rec.data << ")->";
             ptr = ptr->next;
         }
-        
     }
+    cout << endl;
 }
 
-void Table::erase(int key, int number)
+
+void Table::erase(int key)
 {
     assert( key >= 0 );
+    bool found;
     int i = 0;
-    bool element = false;
-    Node * first;
-    Node * previous;
+    Node* first;
+    Node* previous;
+    Node* nodePtr;
+
+    findPtr(key, found, nodePtr);
     
-    i = hash(key);
-    first =   table[i];
-    
-    if(table[i]->rec.data == number && table[i]->next == NULL)
+    if(found == true)
     {
-        table[i] = NULL;
-        delete table[i];
-        used --;
+        i = hash(key);
+        first = table[i];
+    
+        if(table[i]->rec.key == key && table[i]->next == NULL)
+        {
+            table[i] = NULL;
+            delete table[i];
+            used --;
+        }
+        
+        else
+        {
+            while(first != NULL)
+            {
+                if(first->rec.key == key)
+                {
+                    previous = table[i];
+                    first->rec = previous->rec;
+                    table[i] = table[i]->next;
+                    delete previous;
+                    used --;
+                }
+                first = first->next;
+            }
+        }
     }
     
     else
     {
-        while(first != NULL)
-        {
-            if(first->rec.data == number)
-            {
-                element = true;
-                first->rec = table[i]->rec;
-                previous = table[i];
-                table[i] = table[i]->next;
-                delete previous;
-                used --;
-            }
-            first = first->next;
-        }
+        cerr << "The key " << key << " was not found" << endl;
         
-        if(element == false)
-        {
-            cerr << "The element was not found in the record" << endl;
-        }
     }
-
 }
 
 int Table::hash( int key ) const

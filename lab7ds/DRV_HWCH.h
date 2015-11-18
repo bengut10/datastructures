@@ -61,7 +61,7 @@ public:
     void insert( const RecordType& entry );
     void find( int key, bool& found, RecordType& result ) const;
     int size( ) const;
-    void erase(int key, int number);
+    void erase(int key);
     void print();
 private:
     int hash( int key ) const;

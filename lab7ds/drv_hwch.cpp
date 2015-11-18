@@ -20,27 +20,19 @@ using namespace std;
 
 void printMenu( );
 
-int capacity(int capacity, const Table &size);
-
 int main( )
 {
     char choice;   		// Command entered by the user
     Table dataTable;	// A table to perform tests on
     RecordType rec;
-    int key;
+    int key, size;
     bool found;
-    int size ,  number , spotsLeft;
-    
-    
-    
-    
+
     for (int i= 0; i < 40; i++)
     {rec.key = (rand() % 100);
         rec.data = (rand() % 100);
         dataTable.insert(rec);
     }
-    
-    
     
     do
     {
@@ -79,26 +71,12 @@ int main( )
             case 'D': // delete
                 cout << "Enter key (int >= 0) to delete: ";
                 cin >> key;
-                dataTable.find( key, found, rec );
-                if ( found )
-                {
-                    cout << "Which record to delete?" << endl;
-                    cin >> number;
-                    dataTable.erase(key,number);
-                }
-                else
-                {
-                    cerr<< "Record not found" << endl;
-                }
+                dataTable.erase(key);
                 break;
-                
             case 'S': // size
                 size = dataTable.size( );
                 cout << "There are " << size << " records in the table."
                 << endl;
-                spotsLeft = capacity(CAPACITY, dataTable);
-                cout << "There are " << spotsLeft
-                     << " empty slots left in the table." << endl << endl;
                 break;
             case 'P': // print table
                 dataTable.print();
@@ -112,22 +90,6 @@ int main( )
     
     return 0;
 }
-
-int capacity(int capacity, const Table &dataTable){
-    
-    
-    int size = dataTable.size();
-    if (size > capacity)
-    {
-        return 0;
-    }
-    else
-    {
-        return capacity - size;
-    }
-    
-}
-
 
 void printMenu( )
 {
