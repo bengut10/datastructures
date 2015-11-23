@@ -25,6 +25,12 @@
 //    the key in entry, that record will be replaced by entry.
 //    Otherwise, entry will be added as a new record.
 
+// erase funtion:
+// void erase(int key);
+// Preconditions: entry.key >= 0. Findindex is called to determine if
+// key is contained in the linked list pointed to by the array of pointers.
+// Postcondition: Deletes the element with the given key.
+
 // CONSTANT MEMBER FUNCTIONS
 
 // Find function
@@ -37,6 +43,13 @@
 // Size function
 //    int size( ) const;
 // Postcondition: The return value is the number if records in the table.
+
+// print function
+// void print();
+// Precondition: None.
+// Postcondition: The index, key and data elements of the table are
+// printed to the screen. The table is printed in such a way that shows
+// linking in the linked list 
 
 typedef int ItemType;
 const int CAPACITY = 31;

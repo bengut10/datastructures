@@ -5,6 +5,7 @@ using namespace std;
 
 #include "hash_lp.h"
 
+//constructor
 Table::Table( )
 {
    used = 0;
@@ -12,6 +13,7 @@ Table::Table( )
       table[i].key = -1;
 }
 
+//definition of insert function
 void Table::insert( const RecordType& entry )
 {
    bool alreadyThere;
@@ -38,6 +40,7 @@ int Table::hash( int key ) const
    return key % CAPACITY;
 }
 
+//definition of size function
 int Table::size( ) const
 {
    return used;
@@ -65,6 +68,8 @@ void Table::findIndex( int key, bool& found, int& i ) const
    found = table[i].key == key;
 }
 
+
+//definition of find function
 void Table::find( int key, bool& found, RecordType& result ) const
 {
    int index;
@@ -76,9 +81,11 @@ void Table::find( int key, bool& found, RecordType& result ) const
       result = table[index];
 }
 
-
+// definition of erase function
 void Table::erase(int key)
 {
+    assert( key >=0 );
+    
     bool found;
     int index;
     findIndex(key, found, index);
@@ -95,6 +102,7 @@ void Table::erase(int key)
     }
 }
 
+// definition of print function
 void Table::print()
 {
     cout << "The hash table is: " << endl;

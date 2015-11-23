@@ -1,4 +1,9 @@
 //****************************************************************
+//  Programmer: Jose Gutierrez
+//  Project Number: 7
+//  Hash Tables: Linear Probing
+//  Data Structures
+//  11/23/15
 //
 //  HASH TABLE PROGRAM
 //
@@ -12,11 +17,15 @@
 
 #include <iostream>
 #include <iomanip>
+#include "hash_lp.h"
 
 using namespace std;
 
-#include "hash_lp.h"
-
+//*****************************************************************
+//Print menu function.
+//Precondition: None
+//Postcondition: Prints out driver menu.
+//*****************************************************************
 void printMenu( );
 
 int main( )
@@ -87,7 +96,7 @@ int main( )
     
     return 0;
 }
-
+//Print menu definition
 void printMenu( )
 {
     cout << endl; 

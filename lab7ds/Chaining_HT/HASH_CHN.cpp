@@ -7,6 +7,7 @@ using namespace std;
 
 #include "DRV_HWCH.h"
 
+//constructor
 Table::Table( )
 {
     used = 0;
@@ -14,6 +15,7 @@ Table::Table( )
         table[i] = NULL;
 }
 
+//definition of insert
 void Table::insert( const RecordType& entry )
 {
     bool alreadyThere;
@@ -39,6 +41,7 @@ void Table::insert( const RecordType& entry )
     }
 }
 
+//definition of function print
 void Table::print()
 {
     cout << "Index   (Key,Data)" << endl;
@@ -61,7 +64,7 @@ void Table::print()
     cout << endl;
 }
 
-
+//definition of erase
 void Table::erase(int key)
 {
     assert( key >= 0 );
@@ -108,12 +111,13 @@ void Table::erase(int key)
         
     }
 }
-
+//definition of hash
 int Table::hash( int key ) const
 {
     return key % CAPACITY;
 }
 
+//definition of size
 int Table::size( ) const
 {
     return used;
@@ -147,6 +151,7 @@ void Table::findPtr( int key, bool& found, Node*& nodePtr ) const
         nodePtr = NULL;
 }
 
+//definition of find
 void Table::find( int key, bool& found, RecordType& result ) const
 {
     Node* nodePtr;

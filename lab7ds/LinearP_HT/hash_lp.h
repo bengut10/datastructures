@@ -23,6 +23,13 @@ struct RecordType
 //    the key in entry, that record will be replaced by entry.
 //    Otherwise, entry will be added as a new record.
 
+// erase funtion:
+// void erase(int key);
+// Preconditions: entry.key >= 0. Findindex is called to determine if
+// key is contained in the array.
+// Postcondition: The element with the given key is set to NULL and the
+// key is set to -1.
+
 // CONSTANT MEMBER FUNCTIONS
 
 // Find function
@@ -37,6 +44,11 @@ struct RecordType
 // Preconditions:  None. 
 // Postconditions: The return value is the number if records in the table.
  
+// print function
+// void print();
+// Precondition: None.
+// Postcondition: The index, key and data elements of the table are
+// printed to the screen.
 
 class Table
 {

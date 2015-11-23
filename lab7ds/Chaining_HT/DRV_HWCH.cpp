@@ -1,4 +1,9 @@
 //****************************************************************
+//  Programmer: Jose Gutierrez
+//  Project Number: 7
+//  Project Desc: Hash table: Chaining
+//  Course: Data Structures
+//  Date:   Nov 23,2015
 //
 //  HASH TABLE PROGRAM
 //
@@ -18,6 +23,11 @@ using namespace std;
 
 #include "DRV_HWCH.h"
 
+//*****************************************************************
+//Print menu function.
+//Precondition: None
+//Postcondition: Prints out driver menu.
+//*****************************************************************
 void printMenu( );
 
 int main( )
@@ -27,12 +37,6 @@ int main( )
     RecordType rec;
     int key, size;
     bool found;
-
-    for (int i= 0; i < 40; i++)
-    {rec.key = (rand() % 100);
-        rec.data = (rand() % 100);
-        dataTable.insert(rec);
-    }
     
     do
     {
@@ -91,6 +95,7 @@ int main( )
     return 0;
 }
 
+//Definition of print menu
 void printMenu( )
 {
     cout << endl;
