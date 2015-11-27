@@ -11,25 +11,58 @@
 
 using namespace std;
 
+/*Function printMenu
+ Prints out a menu
+ Precondition: None
+ Post condition A menu with two options is printed to the screen*/
 void printMenu();
 
+/*Function Heapify
+ Converts an integer array into a heap using percolate down
+ Precondition: The items to be heapified are indexes 1 through size
+    using percolateDown.
+ PostCondition: The items are turned into a heap.*/
 void heapify(int heapArray[], int size);
 
+/*Function percolateDown
+ Converts an integer array into a heap when called by heapify.
+ Precondtion: Items that are heapified are indexes 1 through size.
+ Postconditions: Arranges the items incorrect order so that they meet
+    a heap's properties.*/
 void percolateDown(int heapArray[], int root, int size);
 
+/*Function displayArray
+ Displays the elements in the array
+ Precondition: None
+ Postcondition: The elements displayed are index 1 through size.*/
 void displayArray(int heapArray[],int size);
 
+/*Function displayTree
+ Desplays the elements in the array in a tree-like structure
+ Precondition: None
+ Postcondition: The elements in the array are displayed index 1 
+    through size in a tree-like format. */
 void displayTree(int heapArray[], int size);
 
+/*DisplayOneLevel function
+ Auxilary function of displaytree function
+ Precondition: None
+ Postcondition: Displays one level at a time when is called by
+    the display tree function.*/
 void displayOneLevel(int heapArray[], int numRows,
                      int level, int beginIndex, int endIndex);
 
+/*Function heapsort
+ Sorts the elements in the array
+ Precondition: Integer array must be a heap. The heapify function is 
+    called to convert it into a heap from elements 1 through size.
+ Postcondition: The elements are sorted in ascending order.*/
 void heapsort(int heapArray[], int size);
 
 
 int main()
 {
-    //srand(time(0));
+    srand(time(0));
     char choice, keepGoing;
     int num, randomNum;
     int *heapArray;
@@ -88,13 +121,14 @@ int main()
 
 }
 
+//Definition of printMenu
 void printMenu()
 {
     cout << endl;
     cout << "H - Heapify" << endl;
     cout << "S - Heapsort" << endl;
 }
-
+//Definition of heapify
 void heapify(int heapArray[], int size)
 {
     for(int r = (size / 2); r >= 1; r--)
@@ -102,7 +136,7 @@ void heapify(int heapArray[], int size)
             percolateDown(heapArray, r, size);
         }
 }
-
+//Definition of percolateDown
 void percolateDown(int heapArray[], int root, int size)
 {
     int c;
@@ -128,17 +162,16 @@ void percolateDown(int heapArray[], int root, int size)
         }
     }
 }
-
+//Definition of displayArray
 void displayArray(int heapArray[],int size)
 {
-    cout << "------------------" << endl;
+    cout << "---------------------------------" << endl;
     for(int i = 1; i < size + 1; i++)
     {
         cout << heapArray[i] << " " ;
     }
 }
-
-
+//Definition of displayTree
 void displayTree(int heapArray[], int size)
 {
     int beginIndex = 0,
@@ -154,8 +187,7 @@ void displayTree(int heapArray[], int size)
         endIndex = min(endIndex +2*rowLength, size-1);
     }
 }
-
-
+//Definition of displayOneLevel
 void displayOneLevel(int heapArray[], int numRows,
                      int level, int beginIndex, int endIndex)
 {
@@ -169,7 +201,7 @@ void displayOneLevel(int heapArray[], int numRows,
     }
     cout << "\n\n";
 }
-
+//Definition of heapsort
 void heapsort(int heapArray[], int size)
 {
     int temp;
@@ -186,9 +218,3 @@ void heapsort(int heapArray[], int size)
         
     }
 }
-
-
-
-
-
-
